@@ -8,6 +8,7 @@ using namespace std;
 
 int main()
 {
+	setlocale(LC_ALL,"russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
@@ -20,41 +21,41 @@ int main()
 	data bell;
 	bell.date = "5.08.18";
 	bell.dur = 25;
-	bell.from = "Петя";
+	bell.from = "РџРµС‚СЏ";
 	bell.time = "13:02";
-	bell.to = "Вася";
+	bell.to = "Р’Р°СЃСЏ";
 	bell.id = 1;
 
 	data bell1;
 	bell1.date = "5.08.18";
 	bell1.dur = 25;
-	bell1.from = "Вася";
+	bell1.from = "Р’Р°СЃСЏ";
 	bell1.time = "13:02";
-	bell1.to = "Петя";
+	bell1.to = "РџРµС‚СЏ";
 	bell1.id = 2;
 
 	data bell2;
 	bell2.date = "27.06.18";
 	bell2.dur = 30;
-	bell2.from = "Инна";
+	bell2.from = "РРЅРЅР°";
 	bell2.time = "15:27";
-	bell2.to = "Жанна";
+	bell2.to = "Р–Р°РЅРЅР°";
 	bell2.id = 3;
 
 	data bell3;
 	bell3.date = "30.02.18";
 	bell3.dur = 15;
-	bell3.from = "Гриша";
+	bell3.from = "Р“СЂРёС€Р°";
 	bell3.time = "16:20";
-	bell3.to = "Коля";
+	bell3.to = "РљРѕР»СЏ";
 	bell3.id = 4;
 
 	data bell4;
 	bell4.date = "25.05.18";
 	bell4.dur = 10;
-	bell4.from = "Соня";
+	bell4.from = "РЎРѕРЅСЏ";
 	bell4.time = "17:28";
-	bell4.to = "Вика";
+	bell4.to = "Р’РёРєР°";
 	bell4.id = 5;
 
 	list.push_back(bell);
@@ -63,85 +64,85 @@ int main()
 	list.push_back(bell3);
 	list.push_back(bell4);
 
-	//Поиск по имени
+	//РџРѕРёСЃРє РїРѕ РёРјРµРЅРё
 	string name;
-	cout << "Введите имя: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ: " << endl;
 	cin >> name;
 	cout << endl;
 	for (int i = 0; i < list.size(); i++) {
 		if (list[i].from == name or list[i].to == name) {
 			cout << "ID: " << list[i].id << endl;
-			cout << "Дата: " << list[i].date << endl;
-			cout << "Длительность: " << list[i].dur << endl;
-			cout << "Откуда: " << list[i].from << endl;
-			cout << "Куда: " << list[i].to << endl;
-			cout << "Время: " << list[i].dur << endl;
+			cout << "Р”Р°С‚Р°: " << list[i].date << endl;
+			cout << "Р”Р»РёС‚РµР»СЊРЅРѕСЃС‚СЊ: " << list[i].dur << endl;
+			cout << "РћС‚РєСѓРґР°: " << list[i].from << endl;
+			cout << "РљСѓРґР°: " << list[i].to << endl;
+			cout << "Р’СЂРµРјСЏ: " << list[i].dur << endl;
 			cout << endl;
 		}
 	}
-	//Поиск по дате
+	//РџРѕРёСЃРє РїРѕ РґР°С‚Рµ
 	string date1;
-	cout << "Введите дату: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ: " << endl;
 	cin >> date1;
 	cout << endl;
 	for (int i = 0; i < list.size(); i++) {
 		if (list[i].from == name or list[i].to == name) {
 			cout << "ID: " << list[i].id << endl;
-			cout << "Дата: " << list[i].date << endl;
-			cout << "Длительность: " << list[i].dur << endl;
-			cout << "Откуда: " << list[i].from << endl;
-			cout << "Куда: " << list[i].to << endl;
-			cout << "Время: " << list[i].dur << endl;
+			cout << "Р”Р°С‚Р°: " << list[i].date << endl;
+			cout << "Р”Р»РёС‚РµР»СЊРЅРѕСЃС‚СЊ: " << list[i].dur << endl;
+			cout << "РћС‚РєСѓРґР°: " << list[i].from << endl;
+			cout << "РљСѓРґР°: " << list[i].to << endl;
+			cout << "Р’СЂРµРјСЏ: " << list[i].dur << endl;
 			cout << endl;
 		}
 	}
 
-	//Поиск по длительности разговора
+	//РџРѕРёСЃРє РїРѕ РґР»РёС‚РµР»СЊРЅРѕСЃС‚Рё СЂР°Р·РіРѕРІРѕСЂР°
 	int dur1;
-	cout << "Введите длительность разговора: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РґР»РёС‚РµР»СЊРЅРѕСЃС‚СЊ СЂР°Р·РіРѕРІРѕСЂР°: " << endl;
 	cin >> dur1;
 	cout << endl;
 	for (int i = 0; i < list.size(); i++) {
 		if (list[i].from == name or list[i].to == name) {
 			cout << "ID: " << list[i].id << endl;
-			cout << "Дата: " << list[i].date << endl;
-			cout << "Длительность: " << list[i].dur << endl;
-			cout << "Откуда: " << list[i].from << endl;
-			cout << "Куда: " << list[i].to << endl;
-			cout << "Время: " << list[i].dur << endl;
+			cout << "Р”Р°С‚Р°: " << list[i].date << endl;
+			cout << "Р”Р»РёС‚РµР»СЊРЅРѕСЃС‚СЊ: " << list[i].dur << endl;
+			cout << "РћС‚РєСѓРґР°: " << list[i].from << endl;
+			cout << "РљСѓРґР°: " << list[i].to << endl;
+			cout << "Р’СЂРµРјСЏ: " << list[i].dur << endl;
 			cout << endl;
 		}
 	}
 	}
 
-	//Сортировка по длительности разговора
+	//РЎРѕСЂС‚РёСЂРѕРІРєР° РїРѕ РґР»РёС‚РµР»СЊРЅРѕСЃС‚Рё СЂР°Р·РіРѕРІРѕСЂР°
 	for (int i = 0; i < list.size(); i++) {
 		for (int j = i + 1; j < list.size(); j++) {
 			if (list[i].dur > list[j].dur) swap(list[i].dur, list[j].dur);
 		}
 	}
 
-	cout << "Сортировка по длительности разговора: " << endl;
+	cout << "РЎРѕСЂС‚РёСЂРѕРІРєР° РїРѕ РґР»РёС‚РµР»СЊРЅРѕСЃС‚Рё СЂР°Р·РіРѕРІРѕСЂР°: " << endl;
 	for (int i = 0; i < list.size(); i++) {
 		cout << list[i].dur << endl;
 	}
 	cout << endl;
 
-	//Добавление нового элемента в телефонную книгу
+	//Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РІ С‚РµР»РµС„РѕРЅРЅСѓСЋ РєРЅРёРіСѓ
 
 	string zvon, otvet, chislo, vremya;
 	int dlina;
 
-	cout << "Добавление нового элемента в телефонную книгу: " << endl;
-	cout << "Введите имя того,кто звонил: " << endl;
+	cout << "Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РІ С‚РµР»РµС„РѕРЅРЅСѓСЋ РєРЅРёРіСѓ: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ С‚РѕРіРѕ,РєС‚Рѕ Р·РІРѕРЅРёР»: " << endl;
 	cin >> zvon;
-	cout << "Введите имя того,кто отвечал на звонок: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ С‚РѕРіРѕ,РєС‚Рѕ РѕС‚РІРµС‡Р°Р» РЅР° Р·РІРѕРЅРѕРє: " << endl;
 	cin >> otvet;
-	cout << "Введите дату: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ: " << endl;
 	cin >> chislo;
-	cout << "Введите время разговора: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РІСЂРµРјСЏ СЂР°Р·РіРѕРІРѕСЂР°: " << endl;
 	cin >> vremya;
-	cout << "Введите длительность разговора: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РґР»РёС‚РµР»СЊРЅРѕСЃС‚СЊ СЂР°Р·РіРѕРІРѕСЂР°: " << endl;
 	cin >> dlina;
 	cout << endl;
 
@@ -155,21 +156,21 @@ int main()
 
 	list.push_back(bell5);
 
-	cout << "Новый список: " << endl;
+	cout << "РќРѕРІС‹Р№ СЃРїРёСЃРѕРє: " << endl;
 	for (int i = 0; i < list.size(); i++) {
 		cout << "ID: " << list[i].id << endl;
-		cout << "Дата: " << list[i].date << endl;
-		cout << "Длительность: " << list[i].dur << endl;
-		cout << "Откуда: " << list[i].from << endl;
-		cout << "Куда: " << list[i].to << endl;
-		cout << "Время: " << list[i].dur << endl;
+		cout << "Р”Р°С‚Р°: " << list[i].date << endl;
+		cout << "Р”Р»РёС‚РµР»СЊРЅРѕСЃС‚СЊ: " << list[i].dur << endl;
+		cout << "РћС‚РєСѓРґР°: " << list[i].from << endl;
+		cout << "РљСѓРґР°: " << list[i].to << endl;
+		cout << "Р’СЂРµРјСЏ: " << list[i].dur << endl;
 		cout << endl;
 	}
 
-	//Удаление элемента из телефонной книги
+	//РЈРґР°Р»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РёР· С‚РµР»РµС„РѕРЅРЅРѕР№ РєРЅРёРіРё
 	
 	int stroka;
-	cout << "Введите номер элемента, который необходимо удалить: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЌР»РµРјРµРЅС‚Р°, РєРѕС‚РѕСЂС‹Р№ РЅРµРѕР±С…РѕРґРёРјРѕ СѓРґР°Р»РёС‚СЊ: " << endl;
 	cin >> stroka;
 
 	auto iter = list.cbegin();
@@ -177,11 +178,11 @@ int main()
 
 	for (int i = 0; i < list.size(); i++) {
 	    cout << "ID: " << list[i].id << endl;
-		cout << "Дата: " << list[i].date << endl;
-		cout << "Длительность: " << list[i].dur << endl;
-		cout << "Откуда: " << list[i].from << endl;
-		cout << "Куда: " << list[i].to << endl;
-		cout << "Время: " << list[i].dur << endl;
+		cout << "Р”Р°С‚Р°: " << list[i].date << endl;
+		cout << "Р”Р»РёС‚РµР»СЊРЅРѕСЃС‚СЊ: " << list[i].dur << endl;
+		cout << "РћС‚РєСѓРґР°: " << list[i].from << endl;
+		cout << "РљСѓРґР°: " << list[i].to << endl;
+		cout << "Р’СЂРµРјСЏ: " << list[i].dur << endl;
 		cout << endl;
 	}
 
