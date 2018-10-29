@@ -182,7 +182,7 @@ int main()
 		cout << "Длительность: " << list[i].dur << endl;
 		cout << "Откуда: " << list[i].from << endl;
 		cout << "Куда: " << list[i].to << endl;
-		cout << "Время: " << list[i].dur << endl;
+		cout << "Время: " << list[i].time << endl;
 		cout << endl;
 	}
 
