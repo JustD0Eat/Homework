@@ -176,8 +176,9 @@ int main()
 	auto iter = list.cbegin();
 	list.erase(iter + stroka - 1);
 
+        cout << "Новый список: " << endl;
 	for (int i = 0; i < list.size(); i++) {
-	    cout << "ID: " << list[i].id << endl;
+	        cout << "ID: " << list[i].id << endl;
 		cout << "Дата: " << list[i].date << endl;
 		cout << "Длительность: " << list[i].dur << endl;
 		cout << "Откуда: " << list[i].from << endl;
