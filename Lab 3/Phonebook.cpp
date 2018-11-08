@@ -173,8 +173,7 @@ int main()
 	cout << "Введите номер элемента, который необходимо удалить: " << endl;
 	cin >> stroka;
 
-	auto iter = list.cbegin();
-	list.erase(iter + stroka - 1);
+	list.erase(list.cbegin() + stroka - 1);
 
         cout << "Новый список: " << endl;
 	for (int i = 0; i < list.size(); i++) {
