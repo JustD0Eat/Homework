@@ -95,7 +95,7 @@ int main()
 	cout << endl;
 	for (int i = 0; i < list.size(); i++) 
 	{
-		if (list[i].from == name or list[i].to == name) 
+		if (list[i].date == date1) 
 		{
 			cout << "ID: " << list[i].id << endl;
 			cout << "Дата: " << list[i].date << endl;
@@ -114,7 +114,7 @@ int main()
 	cout << endl;
 	for (int i = 0; i < list.size(); i++) 
 	{
-		if (list[i].from == name or list[i].to == name) 
+		if (list[i].dur == dur1) 
 		{
 			cout << "ID: " << list[i].id << endl;
 			cout << "Дата: " << list[i].date << endl;
