@@ -4,15 +4,21 @@
 #include <string>
 #include <Windows.h>
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
+using std::string;
+using std::vector;
+using std::swap;
 
 int main()
 {
-	setlocale(LC_ALL,"russian");
+	setlocale(LC_ALL, "russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	struct data {
+	struct data 
+	{
 		int dur, id;
 		string from; string to; string date; string time;
 	};
@@ -69,14 +75,16 @@ int main()
 	cout << "Введите имя: " << endl;
 	cin >> name;
 	cout << endl;
-	for (int i = 0; i < list.size(); i++) {
-		if (list[i].from == name or list[i].to == name) {
+	for (int i = 0; i < list.size(); i++)
+	{
+		if (list[i].from == name or list[i].to == name) 
+		{
 			cout << "ID: " << list[i].id << endl;
 			cout << "Дата: " << list[i].date << endl;
 			cout << "Длительность: " << list[i].dur << endl;
 			cout << "Откуда: " << list[i].from << endl;
 			cout << "Куда: " << list[i].to << endl;
-			cout << "Время: " << list[i].dur << endl;
+			cout << "Время: " << list[i].time << endl;
 			cout << endl;
 		}
 	}
@@ -85,14 +93,16 @@ int main()
 	cout << "Введите дату: " << endl;
 	cin >> date1;
 	cout << endl;
-	for (int i = 0; i < list.size(); i++) {
-		if (list[i].from == name or list[i].to == name) {
+	for (int i = 0; i < list.size(); i++) 
+	{
+		if (list[i].from == name or list[i].to == name) 
+		{
 			cout << "ID: " << list[i].id << endl;
 			cout << "Дата: " << list[i].date << endl;
 			cout << "Длительность: " << list[i].dur << endl;
 			cout << "Откуда: " << list[i].from << endl;
 			cout << "Куда: " << list[i].to << endl;
-			cout << "Время: " << list[i].dur << endl;
+			cout << "Время: " << list[i].time << endl;
 			cout << endl;
 		}
 	}
@@ -102,90 +112,97 @@ int main()
 	cout << "Введите длительность разговора: " << endl;
 	cin >> dur1;
 	cout << endl;
-	for (int i = 0; i < list.size(); i++) {
-		if (list[i].from == name or list[i].to == name) {
+	for (int i = 0; i < list.size(); i++) 
+	{
+		if (list[i].from == name or list[i].to == name) 
+		{
 			cout << "ID: " << list[i].id << endl;
 			cout << "Дата: " << list[i].date << endl;
 			cout << "Длительность: " << list[i].dur << endl;
 			cout << "Откуда: " << list[i].from << endl;
 			cout << "Куда: " << list[i].to << endl;
-			cout << "Время: " << list[i].dur << endl;
+			cout << "Время: " << list[i].time << endl;
 			cout << endl;
 		}
 	}
-	}
 
-	//Сортировка по длительности разговора
-	for (int i = 0; i < list.size(); i++) {
-		for (int j = i + 1; j < list.size(); j++) {
-			if (list[i].dur > list[j].dur) swap(list[i].dur, list[j].dur);
-		}
-	}
 
-	cout << "Сортировка по длительности разговора: " << endl;
-	for (int i = 0; i < list.size(); i++) {
-		cout << list[i].dur << endl;
+//Сортировка по длительности разговора
+for (int i = 0; i < list.size(); i++) 
+{
+	for (int j = i + 1; j < list.size(); j++) 
+	{
+		if (list[i].dur > list[j].dur) swap(list[i].dur, list[j].dur);
 	}
+}
+
+cout << "Сортировка по длительности разговора: " << endl;
+for (int i = 0; i < list.size(); i++) 
+{
+	cout << list[i].dur << endl;
+}
+cout << endl;
+
+//Добавление нового элемента в телефонную книгу
+
+string zvon, otvet, chislo, vremya;
+int dlina;
+
+cout << "Добавление нового элемента в телефонную книгу: " << endl;
+cout << "Введите имя того,кто звонил: " << endl;
+cin >> zvon;
+cout << "Введите имя того,кто отвечал на звонок: " << endl;
+cin >> otvet;
+cout << "Введите дату: " << endl;
+cin >> chislo;
+cout << "Введите время разговора: " << endl;
+cin >> vremya;
+cout << "Введите длительность разговора: " << endl;
+cin >> dlina;
+cout << endl;
+
+data bell5;
+bell5.id = list.size() + 1;
+bell5.date = chislo;
+bell5.dur = dlina;
+bell5.from = zvon;
+bell5.time = vremya;
+bell5.to = otvet;
+
+list.push_back(bell5);
+
+cout << "Новый список: " << endl;
+for (int i = 0; i < list.size(); i++) 
+{
+	cout << "ID: " << list[i].id << endl;
+	cout << "Дата: " << list[i].date << endl;
+	cout << "Длительность: " << list[i].dur << endl;
+	cout << "Откуда: " << list[i].from << endl;
+	cout << "Куда: " << list[i].to << endl;
+	cout << "Время: " << list[i].time << endl;
 	cout << endl;
+}
 
-	//Добавление нового элемента в телефонную книгу
+//Удаление элемента из телефонной книги
 
-	string zvon, otvet, chislo, vremya;
-	int dlina;
+int stroka;
+cout << "Введите номер элемента, который необходимо удалить: " << endl;
+cin >> stroka;
 
-	cout << "Добавление нового элемента в телефонную книгу: " << endl;
-	cout << "Введите имя того,кто звонил: " << endl;
-	cin >> zvon;
-	cout << "Введите имя того,кто отвечал на звонок: " << endl;
-	cin >> otvet;
-	cout << "Введите дату: " << endl;
-	cin >> chislo;
-	cout << "Введите время разговора: " << endl;
-	cin >> vremya;
-	cout << "Введите длительность разговора: " << endl;
-	cin >> dlina;
+list.erase(list.cbegin() + stroka - 1);
+
+cout << "Новый список: " << endl;
+for (int i = 0; i < list.size(); i++) 
+{
+	cout << "ID: " << list[i].id << endl;
+	cout << "Дата: " << list[i].date << endl;
+	cout << "Длительность: " << list[i].dur << endl;
+	cout << "Откуда: " << list[i].from << endl;
+	cout << "Куда: " << list[i].to << endl;
+	cout << "Время: " << list[i].time << endl;
 	cout << endl;
+}
 
-	data bell5;
-	bell5.id = list.size() + 1;
-	bell5.date = chislo;
-	bell5.dur = dlina;
-	bell5.from = zvon;
-	bell5.time = vremya;
-	bell5.to = otvet;
-
-	list.push_back(bell5);
-
-	cout << "Новый список: " << endl;
-	for (int i = 0; i < list.size(); i++) {
-		cout << "ID: " << list[i].id << endl;
-		cout << "Дата: " << list[i].date << endl;
-		cout << "Длительность: " << list[i].dur << endl;
-		cout << "Откуда: " << list[i].from << endl;
-		cout << "Куда: " << list[i].to << endl;
-		cout << "Время: " << list[i].time << endl;
-		cout << endl;
-	}
-
-	//Удаление элемента из телефонной книги
-	
-	int stroka;
-	cout << "Введите номер элемента, который необходимо удалить: " << endl;
-	cin >> stroka;
-
-	list.erase(list.cbegin() + stroka - 1);
-
-        cout << "Новый список: " << endl;
-	for (int i = 0; i < list.size(); i++) {
-	        cout << "ID: " << list[i].id << endl;
-		cout << "Дата: " << list[i].date << endl;
-		cout << "Длительность: " << list[i].dur << endl;
-		cout << "Откуда: " << list[i].from << endl;
-		cout << "Куда: " << list[i].to << endl;
-		cout << "Время: " << list[i].time << endl;
-		cout << endl;
-	}
-
-	system("pause");
-	return 0;
+system("pause");
+return 0;
 }
