@@ -7,14 +7,14 @@
 using namespace std;
 
 struct NOTEBOOK{
-	struct disp_res { // разрешающая способность дисплея
-	int х; // по горизонтали
-	int у; // по вертикали
+	struct disp_res { // Г°Г Г§Г°ГҐГёГ ГѕГ№Г Гї Г±ГЇГ®Г±Г®ГЎГ­Г®Г±ГІГј Г¤ГЁГ±ГЇГ«ГҐГї
+	int Гµ; // ГЇГ® ГЈГ®Г°ГЁГ§Г®Г­ГІГ Г«ГЁ
+	int Гі; // ГЇГ® ГўГҐГ°ГІГЁГЄГ Г«ГЁ
 	}res;
-	int f; // частота регенерации
-	float d; // размер диагонали дисплея
-	int price; // цена
-	char model[21]; // наименование
+	int f; // Г·Г Г±ГІГ®ГІГ  Г°ГҐГЈГҐГ­ГҐГ°Г Г¶ГЁГЁ
+	float d; // Г°Г Г§Г¬ГҐГ° Г¤ГЁГ ГЈГ®Г­Г Г«ГЁ Г¤ГЁГ±ГЇГ«ГҐГї
+	int price; // Г¶ГҐГ­Г 
+	char model[21]; // Г­Г ГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ
 	int ob;
 	int mhz;
 };
@@ -41,10 +41,10 @@ void read(){
 			a[i].d = atof(tmp);
 
 			strncpy_s(tmp, s + 56, 4);
-			a[i].res.х = atoi(tmp);
+			a[i].res.Гµ = atoi(tmp);
 
 			strncpy_s(tmp, s + 61, 4);
-			a[i].res.у = atoi(tmp);
+			a[i].res.Гі = atoi(tmp);
 
 			strncpy_s(tmp, s + 42, 3);
 			a[i].mhz = atoi(tmp);
@@ -60,7 +60,7 @@ void read(){
 void write(int k, NOTEBOOK arr[16]) {
 	ofstream fout("note.bin", ios::binary);
 	for (int i = 0; i < k; i++) {
-		fout << &k << &arr[i].model << &arr[i].price << &arr[i].d << &arr[i].f << &arr[i].res.х << &arr[i].res.у;
+		fout << &k << &arr[i].model << &arr[i].price << &arr[i].d << &arr[i].f << &arr[i].res.Гµ << &arr[i].res.Гі;
 	}
 	fout.close();
 }
@@ -75,8 +75,8 @@ int main() {
 			new_a[j].price = a[i].price;
 			new_a[j].d = a[i].d;
 			new_a[j].f = a[i].f;
-			new_a[j].res.х = a[i].res.х;
-			new_a[j].res.у = a[i].res.у;
+			new_a[j].res.Гµ = a[i].res.Гµ;
+			new_a[j].res.Гі = a[i].res.Гі;
 			j++;
 		}
 	}
