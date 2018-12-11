@@ -14,8 +14,7 @@ public class Main{
         orchestra[1].makeSound();
         orchestra[1].Sound();
 
-        orchestra[2] = new Stringed(6,
-                new double[]{329.63, 246.94, 196.00, 146.83, 110.00, 82.41});
+        orchestra[2] = new Stringed(6, new double[]{329.63, 246.94, 196.00, 146.83, 110.00, 82.41});
         orchestra[2].Instrument("Guitar");
         orchestra[2].makeSound();
         orchestra[2].Sound();
