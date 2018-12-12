@@ -4,12 +4,7 @@
 #include <string>
 #include <Windows.h>
 
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
-using std::vector;
-using std::swap;
+using namespace std;
 
 int main()
 {
