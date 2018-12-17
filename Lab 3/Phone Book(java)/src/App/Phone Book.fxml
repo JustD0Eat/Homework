@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="805.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Controller">
+    <children>
+      <TableView fx:id="table" prefHeight="470.0" prefWidth="80.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <columns>
+            <TableColumn fx:id="IdColumn" prefWidth="30.0" text="ID" />
+            <TableColumn fx:id="FromColumn" prefWidth="100.0" text="From" />
+            <TableColumn fx:id="ToColumn" prefWidth="100.0" text="To" />
+            <TableColumn fx:id="TimeColumn" text="Time" />
+            <TableColumn fx:id="DateColumn" text="Date" />
+            <TableColumn fx:id="DurColumn" text="Duration" />
+         </columns>
+      </TableView>
+      <Label layoutX="6.0" prefHeight="43.0" prefWidth="260.0" text="Phone Book" textFill="WHITE" AnchorPane.bottomAnchor="557.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="539.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Century Gothic" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAdd" layoutX="10.0" layoutY="562.0" mnemonicParsing="false" onAction="#handle" prefHeight="27.0" prefWidth="100.0" text="Add Call" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="695.0" AnchorPane.topAnchor="562.0">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDel" layoutX="120.0" layoutY="562.0" mnemonicParsing="false" onAction="#handle" prefHeight="27.0" prefWidth="100.0" text="Delete Call" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="585.0" AnchorPane.topAnchor="562.0">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+      </Button>
+      <TextField fx:id="toField" layoutX="170.0" layoutY="529.0" prefHeight="25.0" prefWidth="149.0" promptText="To" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="169.0" AnchorPane.rightAnchor="487.0" AnchorPane.topAnchor="529.0" />
+      <TextField fx:id="timeField" layoutX="333.0" layoutY="529.0" prefHeight="25.0" prefWidth="149.0" promptText="Time" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="328.0" AnchorPane.rightAnchor="328.0" AnchorPane.topAnchor="529.0" />
+      <TextField fx:id="dateField" layoutX="486.0" layoutY="529.0" prefHeight="25.0" prefWidth="149.0" promptText="Date" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="487.0" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="529.0" />
+      <TextField fx:id="fromField" layoutX="10.0" layoutY="529.0" prefHeight="25.0" prefWidth="149.0" promptText="From" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="646.0" AnchorPane.topAnchor="529.0" />
+      <TextField fx:id="durField" layoutX="646.0" layoutY="529.0" prefHeight="25.0" prefWidth="149.0" promptText="Duration" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="646.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="529.0" />
+   </children>
+</AnchorPane>
